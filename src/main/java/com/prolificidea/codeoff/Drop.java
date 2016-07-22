@@ -29,11 +29,11 @@ public class Drop {
         int fontSize = g2.getFont().getSize();
         for (int i = 0; i < length; i++) {
             if (getRandomInteger(0, length) == i)
-                if (i == length - 1)
+                if (i == length - 1) {
                     g2.setColor(new Color(0, 250, 0));
-                else
+                } else {
                     g2.setColor(new Color(0, 90, 0));
-
+                }
             g2.drawChars(text[i], 0, 1, x, y + (i * fontSize));
         }
 
