@@ -13,7 +13,7 @@ public class Drop {
         this.x = x;
         length = getRandomInteger(5, 30);
         text = createContent(length);
-        velocity = getRandomInteger(1, 5);
+        velocity = getRandomInteger(1, 7);
         this.y = (-1) * length * Config.FONT_SIZE;
     }
 
@@ -30,12 +30,11 @@ public class Drop {
         for (int i = 0; i < length; i++) {
             if (getRandomInteger(0, length) == i)
                 text[i][0] = getRandomCharacter();
-            if (i == length - 1)
-                g2.setColor(new Color(253, 104, 25));
-            else
-                g2.setColor(new Color(66, 198, 255));
+            g2.setColor(new Color(0, 255, 0));
             g2.drawChars(text[i], 0, 1, x, y + (i * fontSize));
         }
+
+        x += velocity - (velocity * 0.8);
         y += velocity;
     }
 
