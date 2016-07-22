@@ -3,3 +3,11 @@
 /target
 /.idea
 *.iml
+.idea/.name
+.idea/compiler.xml
+.idea/copyright/
+.idea/dbnavigator.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/workspace.xml
+target/
